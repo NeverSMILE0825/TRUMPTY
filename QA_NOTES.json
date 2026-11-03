@@ -1,0 +1,17 @@
+{
+  "site_files": "2 entry HTML pages (homepage, memes vault)",
+  "gallery_cards": 47,
+  "eth_assets": [
+    "01_ethereum_space_scene.png",
+    "02_breaking_news_ethereum.png",
+    "03_promises_broken_ethereum.png",
+    "04_only_best_holders_ethereum.png",
+    "05_tremendous_large_ethereum.png",
+    "06_tremendous_small_ethereum.webp"
+  ],
+  "contract": "Coming Soon..; no Solana address",
+  "links": "local HTML href/src/poster/data-meme links checked and resolve inside ZIP",
+  "javascript": "main, vault and Ethereum override scripts pass node --check",
+  "visual_qa": "not completed; local Chromium navigation blocked by runtime policy",
+  "source_limitation": "browser-saved snapshots; missing original gallery background video, audio, and original font binaries"
+}

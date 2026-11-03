@@ -1,0 +1,520 @@
+<!doctype html>
+<html class="" lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Trumpty Dumpty ($TRUMPTY) — Ethereum</title>
+<meta content="Trumpty Dumpty: an independent Ethereum parody meme-token concept. Contract coming soon; no affiliation or endorsement." name="description"/>
+<meta content="#07070C" name="theme-color"/>
+<!-- Set the full-motion flag BEFORE first paint.
+         The QA harness caught this on the first build: switching the flag on later
+         made the fall sequence's layers go from unpainted to painted, and Chrome
+         recorded that as a layout shift (CLS 1.0). Deciding it here means the page
+         never has a hidden state to transition out of. With JS off this simply
+         never runs, and the static version of the film is what gets shown. -->
+<script>
+      // Only a browser that actually REPORTS reduce-motion gets the static
+      // film; a browser that does not know the query at all returns
+      // matches === false, and those visitors keep the full scroll film.
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("motion-full");
+      }
+    </script>
+<!-- Domain confirmed by the operator (launch round): trumptymemecoin.com.
+         Canonical is live; sitemap.xml, robots.txt and llms.txt ship in public/. -->
+
+<meta content="website" property="og:type"/>
+
+
+<meta content="Trumpty Dumpty — Official Site" property="og:title"/>
+<meta content="Trumpty Dumpty: an independent Ethereum parody meme-token concept. Contract coming soon; no affiliation or endorsement." property="og:description"/>
+<meta content="assets/og-ethereum.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Trumpty Dumpty — Official Site" name="twitter:title"/>
+<meta content="A satirical Ethereum meme-token concept. Contract coming soon; not affiliated with or endorsed by any public figure." name="twitter:description"/>
+<meta content="assets/og-ethereum.jpg" name="twitter:image"/>
+
+
+<!-- Above the fold only: the two fonts and the hero image. -->
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@400;500;600;700;800&amp;family=MedievalSharp&amp;display=swap" rel="stylesheet"/><link href="assets/css/base.css" rel="stylesheet"/><link href="assets/css/main.css" rel="stylesheet"/><link href="assets/css/overrides.css" rel="stylesheet"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<div aria-hidden="true" class="progress"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" data-nav="">
+<a class="nav__brand" href="#top">TRUMPTY DUMPTY</a>
+<nav aria-label="Sections" class="nav__links">
+<a href="#video">Music Video</a>
+<a href="#token">The Coin</a>
+<a href="#faq">FAQ</a>
+<a href="memes/">Memes</a>
+</nav>
+<a class="btn btn--gold btn--mini" href="#token">Get the token</a>
+</header>
+<main id="main">
+<!-- ================================================================ 1 -->
+<section aria-labelledby="hero-title" class="hero" id="top">
+<div aria-hidden="true" class="hero__media">
+<div class="hero__plate" data-parallax="0.03">
+<!-- Per-breakpoint art direction: a composed portrait for phones,
+                 a wide plate for everything else. One image cropped by CSS was
+                 the first build's mobile blur-and-zoom bug. -->
+<picture><source media="(max-width: 767px)" srcset="assets/trumpty-dumpty-character-on-wall-mobile-1024.webp"/>
+
+<img alt="" decoding="async" fetchpriority="high" height="1536" sizes="104vw" src="assets/trumpty-dumpty-character-on-wall-1376.webp" width="2752"/>
+</picture>
+</div>
+<div class="hero__scrim"></div>
+</div>
+<div class="hero__top">
+<h1 aria-label="TRUMPTY DUMPTY" class="hero__title" data-split="" id="hero-title">TRUMPTY DUMPTY</h1>
+<p class="hero__sub">
+            He sat on a wall. He had a great fall. Then things got interesting.
+          </p>
+<!-- The contract address chip reads config.js (the single source of
+               truth); until a value exists it says so. -->
+<p class="hero__links">
+<a class="hero__link" href="#token">
+<span class="hero__link-k">CA</span>
+<span class="hero__link-v" data-hero-ca-out="">Coming Soon..</span>
+</a>
+</p>
+<!-- The operator's socials. Mirrored again in the band above the
+               disclaimer; the canonical list lives in config.js SOCIAL_LINKS.
+               Static markup on purpose: visible with JS off. -->
+<div class="socials socials--hero">
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on X" class="social" data-official-social="x" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official X link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on TikTok" class="social" data-official-social="tiktok" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official TIKTOK link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on Instagram" class="social" data-official-social="instagram" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official INSTAGRAM link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on YouTube" class="social" data-official-social="youtube" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official YOUTUBE link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Join the Trumpty Dumpty Telegram" class="social" data-official-social="telegram" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official TELEGRAM link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+</a>
+</div>
+</div>
+<div class="hero__bottom">
+<div class="hero__actions">
+<a class="btn btn--gold" href="#fall">
+<svg aria-hidden="true" class="btn__icon" focusable="false" viewbox="0 0 12 14">
+<path d="M0 0 L12 7 L0 14 Z" fill="currentColor"></path>
+</svg>
+              Watch him fall
+            </a>
+<a class="btn btn--ghost" href="#token">Get the token</a>
+</div>
+<p class="hero__cue">
+<span class="hero__cue-text">Scroll</span>
+<span aria-hidden="true" class="hero__cue-line"></span>
+</p>
+</div>
+</section>
+<!-- ================================================================ 2 -->
+<!-- THE FILM. Four scenes, each one a CSS sticky stage: the section is
+           tall, the stage sticks to the viewport, and scenes.js writes a 0..1
+           progress value (--p) that style.css turns into the cut. This is the
+           fix for the first build's fall, which was pinned by JavaScript and
+           measured CLS 1.0 doing it. Sticky is layout-neutral: nothing moves
+           in the document, so there is nothing to shift.
+           No JS / reduced motion: the stages collapse into a readable filmstrip
+           of the same plates and captions. -->
+<section aria-labelledby="fall-title" class="scene scene--fall" data-scene="" id="fall" style="--p: 0.0000;">
+<div class="scene__stage">
+<!-- The scene plates load eagerly on purpose: lazy images inside
+               the pinned scroll scenes never loaded on iOS, so phones showed
+               black scenes with only captions over them (the operator's
+               report). Do not put loading="lazy" back on any scene plate. -->
+<div aria-hidden="true" class="scene__media">
+<picture>
+
+<img alt="" class="plate plate--fall-tip" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-fall-tip.webp" style="--in: -0.08; --out: 0.36" width="2752"/>
+</picture>
+<picture>
+
+<img alt="" class="plate plate--fall-tumble plate--still" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-fall-tumble.webp" style="--in: 0.30; --out: 0.68" width="2752"/>
+</picture>
+<picture>
+
+<img alt="" class="plate plate--fall-rush" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-fall-rush.webp" style="--in: 0.62; --out: 1.08" width="2752"/>
+</picture>
+</div>
+<div aria-hidden="true" class="fx fx--streaks">
+<i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
+<div aria-hidden="true" class="scene__shade"></div>
+<div class="scene__copy">
+<h2 class="scene__caption" id="fall-title" style="--in: 0.02; --out: 0.3">
+              Trumpty Dumpty sat on a wall. Trumpty Dumpty had a great fall.
+            </h2>
+<p class="scene__caption" style="--in: 0.36; --out: 0.64">
+              The fall was massive, ok? Tremendous.
+            </p>
+<p class="scene__caption" style="--in: 0.7; --out: 0.98">
+              All the king's horses and all the king's men…
+            </p>
+</div>
+</div>
+</section>
+<!-- ================================================================ 3 -->
+<section aria-labelledby="landing-title" class="scene scene--landing" data-scene="" id="landing" style="--p: 0.0000;">
+<div class="scene__stage">
+<div aria-hidden="true" class="scene__media">
+<picture>
+
+<img alt="" class="plate plate--still" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-impact.webp" style="--in: -0.08; --out: 0.84" width="2752"/>
+</picture>
+<picture>
+
+<img alt="" class="plate" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-scatter.webp" style="--in: 0.68; --out: 1.08" width="2752"/>
+</picture>
+</div>
+<img alt="" aria-hidden="true" class="fx fx--impact-dust fx--impact-dust-a" decoding="async" height="768" loading="eager" src="assets/trumpty-dumpty-sprite-dust.webp" width="1376"/>
+<img alt="" aria-hidden="true" class="fx fx--impact-dust fx--impact-dust-b" decoding="async" height="768" loading="eager" src="assets/trumpty-dumpty-sprite-dust.webp" width="1376"/>
+<div aria-hidden="true" class="fx fx--flash"></div>
+<div aria-hidden="true" class="fx fx--seed-glow"></div>
+<div aria-hidden="true" class="clothes" data-clothes=""></div>
+<div aria-hidden="true" class="scene__shade"></div>
+<div class="scene__copy">
+<h2 class="scene__caption" id="landing-title" style="--in: 0.04; --out: 0.42">
+              …couldn't put Trumpty Dumpty together again.
+            </h2>
+<p class="scene__caption" style="--in: 0.6; --out: 0.98">But this was just the beginning...</p>
+</div>
+</div>
+</section>
+<!-- ================================================================ 4 -->
+<section aria-labelledby="candle-title" class="scene scene--candle" data-scene="" id="candle" style="--p: 0.0000;">
+<div class="scene__stage">
+<div aria-hidden="true" class="scene__media">
+<img alt="" class="plate plate--still plate--bleed" decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-candle.webp" style="--in: -0.08; --out: 1.08" width="2752"/>
+</div>
+<div aria-hidden="true" class="fx fx--ground-glow"></div>
+<img alt="" aria-hidden="true" class="fx fx--candle" decoding="async" height="2752" loading="eager" src="assets/trumpty-dumpty-sprite-candle.webp" width="1536"/>
+<img alt="" aria-hidden="true" class="fx fx--candle-moon" decoding="async" height="768" loading="eager" src="assets/trumpty-dumpty-sprite-moon.webp" width="768"/>
+<div aria-hidden="true" class="scene__shade"></div>
+<div class="scene__copy">
+<h2 class="scene__caption" id="candle-title" style="--in: -0.06; --out: 0.40">
+              A great rumbling occurs...
+            </h2>
+<p class="scene__caption" style="--in: 0.40; --out: 0.70">
+              No more Dumpty, time to Pumpty!
+            </p>
+<p class="scene__caption" style="--in: 0.70; --out: 1.00">
+              TO THE MOON!
+            </p>
+</div>
+</div>
+</section>
+<!-- ================================================================ 5 -->
+<section aria-labelledby="space-title" class="scene scene--space" data-scene="" id="space" style="--p: 0.0000;">
+<div class="scene__stage">
+<canvas aria-hidden="true" class="space__stars" data-stars="" height="953" width="1905"></canvas>
+<img alt="" aria-hidden="true" class="space__nebula" decoding="async" height="1536" loading="eager" src="assets/trumpty-dumpty-scene-nebula.webp" width="2752"/>
+<figure class="space__scene">
+<picture>
+
+<img alt="The Ethereum diamond mascot in a red Tesla Roadster convertible, driving through deep space, holding up a giant golden Trumpty Dumpty coin." decoding="async" height="1536" loading="eager" sizes="100vw" src="assets/trumpty-dumpty-scene-space.webp" width="2752"/>
+</picture>
+</figure>
+<div aria-hidden="true" class="scene__shade"></div>
+<div class="scene__copy scene__copy--space">
+<h2 class="scene__caption" id="space-title" style="--in: 0.3; --out: 0.94">
+              Ethereum took the coin past the moon.
+            </h2>
+</div>
+</div>
+</section>
+<!-- ================================================================ 6 -->
+<section aria-labelledby="video-title" class="video" id="video">
+<div class="wrap">
+<h2 class="section-title" data-reveal="" id="video-title">The music video</h2>
+<div class="video__frame" data-reveal="">
+<button class="video__hit" data-video-hit="" type="button">
+<img alt="Trumpty Dumpty, crown flying, in the middle of his great fall." class="video__poster" decoding="async" height="720" loading="eager" src="assets/trumpty-dumpty-music-video-poster-1280.webp" width="1280"/>
+<span aria-hidden="true" class="video__ring"></span>
+<span aria-hidden="true" class="video__play">
+<svg focusable="false" viewbox="0 0 12 14">
+<path d="M0 0 L12 7 L0 14 Z" fill="currentColor"></path>
+</svg>
+</span>
+<span class="video__sr">Watch the Trumpty Dumpty music video</span>
+</button>
+</div>
+<!-- The Rumble copy of the video (operator upload). A static link on
+               purpose: it works with JS off, like the social rows. -->
+<p class="video__alt" data-reveal="">
+<a aria-disabled="true" class="video__alt-link" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Video link not configured">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M14.4528 13.5458c.8064-.6542.9297-1.8381.2756-2.6445a1.8802 1.8802 0 0 0-.2756-.2756 21.2127 21.2127 0 0 0-4.3121-2.776c-1.066-.51-2.256.2-2.4261 1.414a23.5226 23.5226 0 0 0-.14 5.5021c.116 1.23 1.292 1.964 2.372 1.492a19.6285 19.6285 0 0 0 4.5062-2.704v-.008zm6.9322-5.4002c2.0335 2.228 2.0396 5.637.014 7.8723A26.1487 26.1487 0 0 1 8.2946 23.846c-2.6848.6713-5.4168-.914-6.1662-3.5781-1.524-5.2002-1.3-11.0803.17-16.3045.772-2.744 3.3521-4.4661 6.0102-3.832 4.9242 1.174 9.5443 4.196 13.0764 8.0121v.002z"></path></svg>
+<span>Also on Rumble</span>
+</a>
+</p>
+<p class="video__marquee" data-reveal="">
+            Many people are saying this is the greatest YouTube video ever made. I know it, you
+            know it, everybody knows it.
+          </p>
+<p aria-live="polite" class="video__toast" data-video-toast="" role="status"></p>
+</div>
+</section>
+<!-- ================================================================ 7 -->
+<!-- The address lives only in src/config.js. This block renders whatever
+           that constant holds: the pre-launch state while it is empty, the live
+           state once it matches a Solana mint. -->
+<section aria-labelledby="token-title" class="token" id="token">
+<div class="wrap token__grid">
+<div aria-hidden="true" class="token__coin" data-reveal="">
+<img alt="The official Trumpty Dumpty coin — Trumpty in his crown, struck in gold on a white brick wall." class="coin__photo" decoding="async" height="766" sizes="(min-width: 56rem) 34rem, 100vw" src="assets/trumpty-dumpty-coin-photo-1344.webp" width="1344"/>
+</div>
+<div class="token__body">
+<h2 class="section-title" data-reveal="" id="token-title">The official coin</h2>
+<p class="token__lede" data-reveal="">
+              Look, it’s a beautiful coin, okay? And this version of $TRUMPTY is built on Ethereum.
+              That has a nice ring to it, doesn’t it? E-T-H-E-R-E-U-M. Very powerful token.
+              Everybody’s talking about it. And let me tell you about the
+              address below: it’s the only one this site will ever print. The fake news won't tell
+              you that, but it's true. It's the absolute only one, nobody else can do it!
+            </p>
+<div class="ca" data-ca-block="" data-reveal="" data-stamp="" id="contract">
+<p class="ca__label">Official address</p>
+<p class="ca__value ca__value--live" data-ca-out="">Coming Soon..</p>
+<div class="ca__row">
+<button class="btn btn--gold ca__copy" data-ca-copy="" data-label-default="Copy address" disabled="disabled" type="button">Copy address</button>
+<span aria-hidden="true" class="ca__dust">
+<i></i><i></i><i></i><i></i><i></i><i></i>
+</span>
+</div>
+<p aria-live="polite" class="ca__result" data-ca-live="" role="status"></p>
+</div>
+<ol class="steps" data-reveal="">
+<li class="step">
+<span aria-hidden="true" class="step__num">1</span>
+<div>
+<h3 class="step__title">Get a wallet</h3>
+<p class="step__body">MetaMask, Rabby, or another Ethereum wallet. Set it to Ethereum mainnet.</p>
+</div>
+</li>
+<li class="step">
+<span aria-hidden="true" class="step__num">2</span>
+<div>
+<h3 class="step__title">Load it with ETH</h3>
+<p class="step__body">Add ETH for network fees and your swap. Only use what you can afford to risk.</p>
+</div>
+</li>
+<li class="step">
+<span aria-hidden="true" class="step__num">3</span>
+<div>
+<h3 class="step__title">Swap for Trumpty</h3>
+<p class="step__body">
+                    Once the Ethereum contract is announced, verify its address here before swapping through Uniswap V4.
+                  </p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<!-- ================================================================ 8 -->
+<section aria-labelledby="road-title" class="road" id="plan">
+<div aria-hidden="true" class="road__world">
+<div class="road__world-img" data-parallax="0.05">
+<picture><source media="(max-width: 767px)" srcset="assets/trumpty-dumpty-character-on-wall-mobile-1024.webp"/>
+
+<img alt="" decoding="async" height="1536" loading="lazy" sizes="100vw" src="assets/trumpty-dumpty-character-on-wall-1376.webp" width="2752"/>
+</picture>
+</div>
+<div class="road__world-scrim"></div>
+</div>
+<div class="wrap road__inner">
+<h2 class="section-title section-title--light" data-reveal="" id="road-title">The plan</h2>
+<ol class="flags">
+<li class="flag is-planted" data-reveal="">
+<span aria-hidden="true" class="flag__pole"></span>
+<span aria-hidden="true" class="flag__cloth">
+<span class="flag__numeral">I</span>
+</span>
+<span class="flag__label">Create meme coin</span>
+</li>
+<li class="flag is-planted" data-reveal="">
+<span aria-hidden="true" class="flag__pole"></span>
+<span aria-hidden="true" class="flag__cloth">
+<span class="flag__numeral">II</span>
+</span>
+<span class="flag__label">Blast social media with Trumpty memes</span>
+</li>
+<li class="flag is-planted" data-reveal="">
+<span aria-hidden="true" class="flag__pole"></span>
+<span aria-hidden="true" class="flag__cloth">
+<span class="flag__numeral">III</span>
+</span>
+<span class="flag__label">Buy everyone Lambos cuz we're billionaires</span>
+</li>
+<li class="flag is-planted" data-reveal="">
+<span aria-hidden="true" class="flag__pole"></span>
+<span aria-hidden="true" class="flag__cloth">
+<span class="flag__numeral">IV</span>
+</span>
+<span class="flag__label">Win so much that we get tired of winning</span>
+</li>
+</ol>
+</div>
+</section>
+<!-- ================================================================ 9 -->
+<section aria-labelledby="faq-title" class="faq" id="faq">
+<div class="wrap">
+<h2 class="section-title" data-reveal="" id="faq-title">Questions</h2>
+<div class="accordion" data-accordion="">
+<div class="accordion__item">
+<h3 class="accordion__heading">
+<button aria-controls="faq-p1" aria-expanded="false" class="accordion__trigger" id="faq-t1" type="button">
+                  What is Trumpty Dumpty Coin?
+                  <span aria-hidden="true" class="accordion__chevron"></span>
+</button>
+</h3>
+<div aria-labelledby="faq-t1" class="accordion__panel" hidden="" id="faq-p1" role="region">
+<blockquote class="speech">
+<p>
+                    Trumpty Dumpty Coin. Tremendous coin. Maybe one of the most incredible coins
+                    ever created. People are talking about it. Very strongly. They say, 'Sir, how
+                    did you make a coin this beautiful?' And I tell them, we have the best people.
+                    The best memes. Nobody does memes like Trumpty.
+                  </p>
+<cite>TRUMPTY</cite>
+</blockquote>
+</div>
+</div>
+<div class="accordion__item">
+<h3 class="accordion__heading">
+<button aria-controls="faq-p2" aria-expanded="false" class="accordion__trigger" id="faq-t2" type="button">
+                  Why should I buy this token?
+                  <span aria-hidden="true" class="accordion__chevron"></span>
+</button>
+</h3>
+<div aria-labelledby="faq-t2" class="accordion__panel" hidden="" id="faq-p2" role="region">
+<blockquote class="speech">
+<p>
+                    Well, I can't tell you what to buy. You have to make that decision yourself.
+                    But look at Trumpty. Look at him. Magnificent. Other tokens come along, frankly,
+                    very boring tokens. No personality whatsoever. Trumpty has personality. He has a
+                    wall. He has music. He has memes. Do your own research, folks, but people are
+                    having a lot of fun with this one.
+                  </p>
+<cite>TRUMPTY</cite>
+</blockquote>
+</div>
+</div>
+<div class="accordion__item">
+<h3 class="accordion__heading">
+<button aria-controls="faq-p3" aria-expanded="false" class="accordion__trigger" id="faq-t3" type="button">
+                  What is the contract address?
+                  <span aria-hidden="true" class="accordion__chevron"></span>
+</button>
+</h3>
+<div aria-labelledby="faq-t3" class="accordion__panel" hidden="" id="faq-p3" role="region">
+<blockquote class="speech">
+<p>
+                    The contract address is right here on the official website. Very important: use
+                    the official one. There are copycats out there. Fake Trumptys. Sad! Check it,
+                    verify it, and don't send your money to some guy pretending to be Trumpty.
+                  </p>
+<cite>TRUMPTY</cite>
+</blockquote>
+<p class="ca__inline">
+                  Contract Address:
+                  <span class="ca__inline-value" data-ca-faq="">Coming Soon..</span>
+</p>
+</div>
+</div>
+<div class="accordion__item">
+<h3 class="accordion__heading">
+<button aria-controls="faq-p4" aria-expanded="false" class="accordion__trigger" id="faq-t4" type="button">
+                  Is the DEV team experienced?
+                  <span aria-hidden="true" class="accordion__chevron"></span>
+</button>
+</h3>
+<div aria-labelledby="faq-t4" class="accordion__panel" hidden="" id="faq-p4" role="region">
+<blockquote class="speech">
+<p>
+                    Our founder graduated from an Ivy League college, cum laude with a
+                    PhD in meme coin studies, total genius, believe me! He works exclusively
+                    with the absolute best developers in the world. Tremendous talent,
+                    only the best!
+                  </p>
+<cite>TRUMPTY</cite>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================ 9b -->
+<!-- Socials: the last stop before the disclaimer (operator placement).
+           Same five links as the hero row; canonical list in config.js. -->
+<section aria-label="Trumpty Dumpty on social media" class="socials-band">
+<div class="wrap">
+<p class="socials-band__label">Follow Trumpty Dumpty</p>
+<div class="socials">
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on X" class="social" data-official-social="x" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official X link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on TikTok" class="social" data-official-social="tiktok" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official TIKTOK link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on Instagram" class="social" data-official-social="instagram" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official INSTAGRAM link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Follow Trumpty Dumpty on YouTube" class="social" data-official-social="youtube" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official YOUTUBE link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+<a aria-disabled="true" aria-label="Join the Trumpty Dumpty Telegram" class="social" data-official-social="telegram" rel="noopener noreferrer" tabindex="-1" target="_blank" title="Add official TELEGRAM link in site-config.js">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+</a>
+</div>
+<a class="btn btn--ghost btn--mini" href="memes/">Browse the Meme Vault — 47 free memes</a>
+</div>
+</section>
+<!-- ================================================================ 10 -->
+<!-- The disclaimer is the LAST block on the page, by operator instruction. -->
+<section aria-labelledby="disclaimer-title" class="disclaimer" id="disclaimer">
+<div class="wrap">
+<h2 class="disclaimer__title" id="disclaimer-title">DISCLAIMER</h2>
+<p>
+            TRUMPTY DUMPTY is a parody and entertainment project. It is not affiliated with or
+            endorsed by Donald Trump, The Trump Organization, or any related person or entity,
+            and nothing here implies any real person approves of or is involved in it.
+          </p><p>Independent Ethereum adaptation; not affiliated with the original Solana token, its team, or any public figure.</p>
+<p>
+            Nothing on this site is financial advice, a recommendation, or an offer to buy or sell
+            anything, and nothing described here is a promise.
+          </p>
+<p>
+            The Meme Vault page plays our own Trumpty Dumpty song. The site uses no voice
+            impersonation.
+          </p>
+<p>
+            This site is provided "as is", with no warranty, and its operators are not liable for
+            any loss arising from its use or from any purchase. 18+ only.
+          </p>
+<p class="disclaimer__foot">
+            © 2026 Trumpty Dumpty
+            <span aria-hidden="true" class="disclaimer__sep">·</span>
+            Built as a parody.
+          </p>
+</div>
+</section>
+</main>
+
+<script src="assets/js/main.js" type="module"></script><script src="site-config.js"></script><script src="assets/js/eth-site.js" type="module"></script></body></html>
