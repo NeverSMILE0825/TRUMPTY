@@ -1,0 +1,20 @@
+---
+description: After codebase updates, commit/push to GitHub so Pages republishes
+alwaysApply: true
+---
+
+# Deploy updates to GitHub Pages
+
+This project is a static site published via GitHub Pages from the `main` branch root.
+
+- Repo: https://github.com/NeverSMILE0825/TRUMPTY.git
+- Live site: https://neversmile0825.github.io/TRUMPTY/
+
+Whenever you finish substantive website/codebase changes in this workspace:
+
+1. Commit the relevant changes (ask first only if the user previously said not to commit; otherwise the user has requested automatic push/publish for updates).
+2. Push to `origin/main`.
+3. GitHub Pages auto-redeploys from `main` `/` — no extra publish step is required.
+4. Tell the user the live URL and that Pages may take ~30–60 seconds to refresh.
+
+Use account `NeverSMILE0825` for `gh`/git auth against this repo. Prefer `$env:LOCALAPPDATA\gh-cli\bin\gh.exe` if the npm `gh` shim is on PATH.
